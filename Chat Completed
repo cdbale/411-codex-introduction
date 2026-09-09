@@ -1,0 +1,153 @@
+ARCHIVED REQUESTS AND PREVIOUS VERIFICATION — SEPTEMBER 9, 2026
+The following is the original tracking text, preserved verbatim. Historical
+slide counts and test results are superseded by the completed update below.
+
+MKTG 411: Codex Introduction — Approved Topics and Verification
+Updated: September 7, 2026
+
+AUTHORIZED SCOPE
+The instructor approved all 10 proposed topics and added two access slides:
+start with Free, claim the student $100 in credits if eligible, and plan to
+upgrade to a paid account if usage limits arise during the semester.
+The instructor also requested the Chrome/Canvas example and Lecture Setup skill.
+
+DELIVERED
+411 Codex Introduction.Rmd: 16 slides including the title.
+style.css and Figures/hex_background.png: course ioslides style and background.
+README.md: file inventory, teaching setup, source/build status.
+Estimated introduction: 30–40 minutes including the five-minute practice,
+with additional time for installation and student verification.
+
+APPROVED CHECKLIST — ALL VERIFIED IN SOURCE
+1. Today's Learning Goals — slide 2.
+   Decision: Approve. Outcomes match setup, R help, review, and plugins.
+2. What Codex does — slide 3.
+   Decision: Approve. Coding and learning examples use marketing analytics.
+3. Installation and sign-in — slide 4.
+   Decision: Approve. Official Windows/macOS setup, account, Codex selection,
+   and continued use of R/RStudio.
+4. First project and interface — slide 7.
+   Decision: Approve. Practice folder, task, saved demo.R, messages, file review.
+5. Useful prompts — slide 8.
+   Decision: Approve. Goal, file, constraints, output, and follow-up example.
+6. Coding help — slide 9.
+   Decision: Approve. Self-contained CSV text in base R, revenue summary,
+   focused modification, and intended error. No extra packages or downloads.
+7. Learning with Codex — slide 10.
+   Decision: Approve. Hints, explanations, quizzes, and explaining reasoning back.
+8. Checking the work — slide 11.
+   Decision: Approve. Review edits, run R, verify arithmetic, interpret results,
+   read permissions, and follow assignment-specific AI rules.
+9. Plugin basics — slide 12.
+   Decision: Approve. Browse/install/use Spreadsheets, review permissions,
+   and check an Excel SUM formula. Student Free-account availability unverified;
+   instructor demonstration fallback stated on the slide.
+10. Five-minute practice — slide 16.
+    Decision: Approve. Explain demo.R, calculate mean Email revenue, run/check,
+    and reflect. Instructor answers are HTML comments in the source.
+11. Free access and upgrading — slide 5.
+    Decision: Approve (explicit additional request). Start Free and plan to
+    upgrade if limits arise at any point during the semester. Paid limits noted.
+12. Student credits — slide 6.
+    Decision: Approve (explicit additional request). Claim link, verification,
+    Free eligibility, $100/2,500 credits, geography, and 12-month expiry.
+
+13. Chrome access to Canvas — slide 13.
+    Decision: Approve (explicit request). Browser plugin and extension setup,
+    personal sign-in, @Chrome, and Canvas-site permissions.
+14. Lecture Setup installation — slide 14.
+    Decision: Approve (explicit request). Distributable ZIP, personal install,
+    and $lecture-setup invocation.
+15. Lecture Setup example — slide 15.
+    Decision: Approve (explicit request). Named Canvas lecture and course root,
+    verified downloads, preservation of work, and a local materials manifest.
+
+LECTURE SETUP DELIVERABLES
+- Repository source: skills/lecture-setup/SKILL.md and agents/openai.yaml.
+- Student package: lecture-setup.zip.
+- Personal install: C:/Users/Cam/.codex/skills/lecture-setup.
+- Bundled skill validator passed on both source and installed copies.
+- Live Canvas downloads were not run; no specific course/lecture was selected.
+- Source review covered ambiguous course matches, disconnected/login states,
+  conflicting local files, duplicate links, non-downloadable resources, and
+  incomplete downloads. This is a design review, not a live workflow test.
+VERIFICATION
+- Inspected all 15 content-slide sections and confirmed learning goals follow title.
+- Executed the exact embedded R example using R 4.6.1, without knitting/rendering.
+- Verified total revenue 400, Email total 200, and Email average 100.
+- Reproduced the intended sum(revenue) error in a fresh session.
+- Checked code-fence balance and local stylesheet/background paths.
+- Confirmed background copy matches the existing course image by hash.
+- Rendering has not been requested or performed; visual layout is unverified.
+- Free-account usage and plugin availability have not been tested on a student account.
+
+COURSE MATERIALS SCOPE
+Slides: Verified at source level; no rendered output created.
+Exercise: Verified as the approved on-slide activity; no separate assignment in scope.
+Starter code: Verified as the embedded R example; no separate starter file in scope.
+Canvas exercise description: Outside the approved slide and skill scope; unchanged.
+Canvas grading/rubric note: Outside the approved slide and skill scope; unchanged.
+
+OFFICIAL REFERENCES
+https://learn.chatgpt.com/docs/quickstart
+https://learn.chatgpt.com/docs/windows/windows-app
+https://learn.chatgpt.com/docs/plugins
+https://learn.chatgpt.com/docs/chrome-extension
+https://learn.chatgpt.com/docs/pricing
+https://developers.openai.com/community/students
+Checked September 7, 2026. Official docs describe Codex within the ChatGPT desktop
+app. Specific plans, offers, UI labels, and account availability can change.
+
+INSTRUCTOR REQUESTED CHANGES
+Add approvals, revisions, rejected topics, or additional requests below.
+
+- Slide 2: fourth bullet point to practice checking AI work and try a plugin
+- Slide 2: fifth bullet point: use Lecture Setup Skill to organize materials from Canvas
+- Slide 3: convert into similar table labeled "Simple Tasks": use examples "Understanding Code", "Fixing an Error", "Choosing a Function", and maybe one more simple task that might be encountered frequently when doing marketing analytics.
+- Add a new Slide 4 with another table, like on Slide 3, but for "Complex Tasks". Examples: 
+ -- An Analysis. "My client wants to identify the most valuable customers. I think we should start by identifying who made the most recent purchases. Can you identify any shortcomings with this approach, and suggest alternative definitions of "valuable" customers? Then we'll identify the pros and cons of each definition together."
+ -- Vibe coding: "Based on this analysis of most valuable customers, I want to build a dashboard that allows decision makers to easily query the data and visualize customer characteristics. Let's start by outlining an implementation plan and then executing on that plan. I'll rely on you to write the back end code, so please provide me with a way to access the front-end dashboard to evaluate it and provide feedback."
+- Slide 7: bullet point 3: instruct students to download 'demo.R' from Canvas. On a related note: create an actual "demo.R" file that contains the code on slide 9. We will upload this file to Canvas along with the other lecture materials. Also, convert the example code in 'demo.R' to use tidyverse syntax - we tend to avoid base R code in this class.
+- Slide 9: move the debugging demo to a new slide.
+- Add a standalone slide (you decide where it would be most appropriate) that clearly states students MUST save their files before asking Codex to make changes. Otherwise, either their unsaved changes OR Codex changes will be deleted. Add a bullet point saying: Let's see an example of what NOT to do...
+
+
+COMPLETED UPDATE — SEPTEMBER 9, 2026
+Status: Verified at source level. The instructor requested execution of the
+changes in Chat To Do. Slide numbers in the archived requests refer to the
+previous deck; the resulting deck has 19 slides including the title.
+
+- Revised learning-goal bullets 4 and 5 as requested (slide 2).
+- Replaced the original task table with Simple Tasks (slide 3): Understanding
+  Code, Fixing an Error, Choosing a Function, and Making a Plot.
+- Added Complex Tasks (slide 4), retaining both instructor-provided prompts
+  about valuable customers and building a dashboard with a feedback loop.
+- Updated Your First Project (slide 8) to download demo.R from Canvas.
+- Added the file-saving slide (slide 9), explaining how unsaved changes or
+  Codex changes can be overwritten, with the requested demonstration bullet.
+- Converted the working example to tidyverse and created demo.R (slide 11).
+- Moved the intentional debugging error to its own slide (slide 12).
+- Aligned the prompt, learning example, and practice notes with tidyverse.
+  The five-minute practice remains the final slide (slide 19).
+
+VERIFICATION FOR THIS UPDATE
+- Executed the tidyverse example using the installed R 4.6.1 course library.
+- Parsed demo.R and the working slide chunk and verified they are identical.
+- Verified total revenue 400, Email total 200, and Email mean 100.
+- Reproduced the standalone debugging example's missing revenues-column error.
+- Checked all requested changes in the source and confirmed the 19-slide order.
+- README now describes demo.R and the updated source/build status.
+- No render was requested or performed. Existing 411-Codex-Introduction.html
+  was preserved and does not include these latest source changes.
+- demo.R is prepared for the instructor's future Canvas upload. No Canvas
+  posting, assignment/rubric change, or upload was requested in this update.
+- testing_stuff.R and the existing rendered HTML were left unchanged.
+
+COURSE CHECKLIST SCOPE
+Slides: Verified in source.
+Exercise: Verified as the concluding on-slide activity, with aligned notes.
+Starter code: Verified; demo.R matches the slide and executes successfully.
+Canvas exercise description: Not applicable to the requested local edits.
+Canvas grading/rubric note: Not applicable to the requested local edits.
+Canvas starter upload: Prepared locally for future publishing by the instructor.
+GitHub synchronization: Completion is verified separately after committing.

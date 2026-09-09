@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lecture Setup"
+  short_description: "Download Canvas lecture materials into course folders"
+  default_prompt: "Use $lecture-setup to download the specified Canvas lecture materials into my local course folder."

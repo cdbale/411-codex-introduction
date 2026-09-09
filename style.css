@@ -1,0 +1,29 @@
+slides > slide.title-slide {
+    background-image: url("Figures/hex_background.png");
+    background-size: 100% 100%;
+}
+
+/* Preserve the course ioslides defaults; keep source links legible. */
+slides > slide .source {
+    font-size: 16px;
+    line-height: 1.3;
+    margin-top: 18px;
+}
+
+slides > slide blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 18px;
+    border-left: 4px solid #477b95;
+}
+
+/* Give the longer example prompts room without changing other slides. */
+slides > slide.complex-tasks table {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+slides > slide.complex-tasks th:first-child,
+slides > slide.complex-tasks td:first-child {
+    width: 160px;
+}

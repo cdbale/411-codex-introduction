@@ -1,0 +1,283 @@
+---
+title: "Getting Started with Codex"
+subtitle: "MCB Consulting Group (MKTG 411)"
+output:
+  ioslides_presentation:
+    widescreen: true
+    css: style.css
+---
+
+## Today's Learning Goals
+
+By the end of class, you should be able to:
+
+- Set up Codex and understand your access options.
+- Give Codex enough context to help with an R task.
+- Use explanations and feedback to build your understanding.
+- Practice checking AI work and try a plugin.
+- Use the Lecture Setup Skill to organize materials from Canvas.
+
+## Simple Tasks
+
+Codex is an AI agent that can work with files in your project.
+
+| When you need help with... | A useful request |
+|---|---|
+| Understanding Code | "Explain what each line of this code does." |
+| Fixing an Error | "Explain this error and suggest the smallest fix." |
+| Choosing a Function | "Which tidyverse function should I use to keep only Email orders?" |
+| Making a Plot | "Help me make a bar chart of revenue by marketing channel." |
+
+You supply the business question and evaluate the answer.
+
+## Complex Tasks {.complex-tasks}
+
+| When you need help with... | A useful request |
+|---|---|
+| An Analysis | "My client wants to identify the most valuable customers. I think we should start by identifying who made the most recent purchases. Can you identify any shortcomings with this approach, and suggest alternative definitions of 'valuable' customers? Then we'll identify the pros and cons of each definition together." |
+| Vibe Coding | "Based on this analysis of most valuable customers, I want to build a dashboard that allows decision makers to easily query the data and visualize customer characteristics. Let's start by outlining an implementation plan and then executing on that plan. I'll rely on you to write the back end code, so please provide me with a way to access the front-end dashboard to evaluate it and provide feedback." |
+
+## Installation and Sign-In
+
+1. Open the official [desktop setup guide](https://learn.chatgpt.com/docs/quickstart).
+   Download and install the version for **Windows or macOS**.
+2. Open the desktop app and sign in with your **ChatGPT account**.
+3. Select **Codex** from the product menu.
+4. Send a first message: "I'm learning R for marketing analytics."
+
+Codex is now part of the ChatGPT desktop app. Keep **R and RStudio**
+installed for running and checking your course code.
+
+<p class="source">Setup checked September 7, 2026. <a href="https://learn.chatgpt.com/docs/windows/windows-app">Windows setup help</a>.</p>
+
+## Our Plan for Access This Semester
+
+- **Start with ChatGPT Free.** It includes Codex for short coding tasks.
+- Claim the student credits on the next slide.
+- **Plan to upgrade to a paid account if you encounter usage limits at any
+  point during the semester.** Plus is currently US$20/month.
+- Check your usage balance and reset time when a limit appears.
+  Paid accounts also have limits.
+
+Small, focused requests use less capacity than long tasks with many files.
+Free access has no published fixed token allowance we can promise for class.
+
+<p class="source"><a href="https://learn.chatgpt.com/docs/pricing">Official plans and usage guidance</a>. Checked September 7, 2026.</p>
+
+## Your Student $100 in Codex Credits
+
+1. Open [Codex for Students](https://developers.openai.com/community/students)
+   and select **Claim now**.
+2. Sign in with the ChatGPT account you use for class.
+   Use your university email to verify your student status.
+3. After approval, check your usage page for **2,500 credits ($100)**.
+
+- Free accounts qualify. Credits extend your included Codex usage.
+- You must attend a degree-granting university in the U.S. or Canada
+  and reside in the U.S. or Canada when claiming.
+- One offer per verified student. Credits expire **12 months after the grant**.
+
+<p class="source"><a href="https://developers.openai.com/community/students">Student offer and eligibility</a>. Checked September 7, 2026.</p>
+
+## Your First Project
+
+1. Create `MKTG-411/codex-practice` on your computer.
+2. In Codex, add or open that folder as a project and start a new task.
+3. Download **`demo.R` from Canvas** and place it in that folder.
+   Open it in RStudio.
+
+| Part of the app | What you do there |
+|---|---|
+| Project and task list | Return to your course folder and conversations. |
+| Message box | Name a file, describe a goal, and give follow-up instructions. |
+| File or change view | Open the saved output and inspect edits. |
+
+## Saving Files Before Codex Makes Changes
+
+- You **MUST save your files before asking Codex to make changes**.
+- Codex works with the saved file on disk. Unsaved edits exist only in your editor.
+- Reloading can discard your unsaved edits. Saving an old editor copy after
+  Codex finishes can overwrite Codex's changes.
+- After Codex finishes, reload the updated file and review it before editing again.
+- **Let's see an example of what NOT to do...**
+
+<!-- Instructor: Demonstrate using a disposable copy of a file. Make an unsaved
+edit in RStudio, ask Codex for a different edit, and show how the editor and disk
+copies diverge. Explain both outcomes: saving the stale buffer overwrites Codex's
+edit; reloading discards the unsaved edit. Finish by showing the correct sequence:
+save first, ask Codex, then reload/review before continuing. -->
+
+## A Useful Prompt Has Context
+
+**Too vague:** "Fix my code."
+
+**More useful:**
+
+> In `demo.R`, help me calculate total revenue for Email orders.
+> Use tidyverse syntax and preserve the original data. Explain your plan before
+> editing. After the change, explain each new line and how I can check it.
+
+- State the **goal**, **file**, **constraints**, and **desired output**.
+- For an error, include the exact message and what you expected.
+- Continue with a focused follow-up: "Explain the row selection more slowly."
+
+## Coding Help with R
+
+Open the `demo.R` you downloaded from Canvas. Each row is one fictional order.
+
+```{r sales-example, eval=FALSE}
+library(tidyverse)
+
+sales <- tribble(
+  ~channel, ~revenue,
+  "Email",      120,
+  "Email",       80,
+  "Search",     150,
+  "Search",      50
+)
+
+sales |>
+  summarise(total_revenue = sum(revenue))
+```
+
+Ask: "Explain this code. Help me calculate revenue for Email orders only."
+
+<!-- Instructor: Run the example in RStudio. Total revenue is 400.
+Email total is 200. A valid change is
+sales |> filter(channel == "Email") |> summarise(total_revenue = sum(revenue)).
+Keep this explanation out of the student-facing code until discussion. -->
+
+## Debugging with Codex
+
+After running `demo.R`, try this example in the RStudio Console.
+It contains an intentional mistake:
+
+```{r debugging-example, eval=FALSE}
+sales |>
+  summarise(total_revenue = sum(revenues))
+```
+
+Give Codex the code, the **exact error message**, and your intended result:
+
+> "I expected total revenue across all orders. Explain this error and suggest
+> the smallest fix. Help me understand why the corrected code works."
+
+Run the correction and check the answer against the four orders.
+
+<!-- Instructor: The column is revenue, not revenues. The incorrect pipeline
+should report that revenues is not found. The corrected total is 400.
+The downloadable demo.R intentionally contains only the working example. -->
+
+## Learning with Codex
+
+Choose the kind of help you need:
+
+> "Give me one hint about selecting Email orders. Wait for my attempt."
+
+> "Explain what `|>` does in this example. Use the data to illustrate it."
+
+> "Quiz me on total versus average order revenue, one question at a time."
+
+Then explain it back:
+
+> "Here is my explanation of the code. What did I misunderstand?"
+
+## Checking the Work
+
+- **Review:** Read the changed lines and ask what each change accomplishes.
+- **Run:** Execute the saved script in RStudio. Check errors and output.
+- **Verify:** Add the two Email orders by hand and compare the result.
+- **Interpret:** Does total revenue alone show which channel is more effective?
+
+Before granting permission, read which files or services Codex will access.
+Use course-approved data and follow each assignment's AI-use rules.
+You are responsible for understanding the work you submit.
+
+## Plugin Basics
+
+Plugins add capabilities. **Skills** provide task instructions.
+**Connectors** give access to external services.
+
+1. Open **Plugins**, search for **Spreadsheets**, and open its listing.
+2. Install it if needed. Review any connection or permission requests.
+3. Start a new task in your practice project and name the plugin:
+
+> "Use the Spreadsheets plugin to create `revenue-check.xlsx` with
+> Email orders of $120 and $80. Include a SUM formula for the total."
+
+Open the result and check the formula. If the plugin is unavailable on your
+account, follow the instructor's demonstration.
+
+<p class="source"><a href="https://learn.chatgpt.com/docs/plugins">Plugin installation and use</a>. Availability can vary by account.</p>
+
+<!-- Instructor: Spreadsheets is available in this authoring environment.
+Its availability on a student Free account has not been verified.
+Demonstrate from the instructor account if needed. No plugin installation
+or external account connection is required to complete the R practice. -->
+
+## Chrome Access to Canvas
+
+1. In the desktop app, open **Settings > Computer Use** and select **Chrome**.
+   Follow the prompts to install the browser plugin and ChatGPT extension.
+2. Confirm Chrome shows **Manage**. In that Chrome profile, sign in to Canvas
+   yourself and open our course.
+3. Start a Codex task, choose **@Chrome**, and ask:
+
+> "Read my open MKTG 411 Canvas page and tell me which lecture modules you see."
+
+When prompted, choose **Allow once** or **Allow for this site** for Canvas.
+Keep passwords and verification codes in the browser sign-in flow.
+
+<p class="source"><a href="https://learn.chatgpt.com/docs/chrome-extension">Browser extension setup and site permissions</a>. Availability depends on your account and setup.</p>
+
+## A Reusable Skill: Lecture Setup
+
+The browser plugin provides access. A **skill** supplies a repeatable workflow.
+
+1. Download [lecture-setup.zip](lecture-setup.zip) with this lecture's materials
+   and extract the `lecture-setup` folder into your course folder.
+2. Open that local folder in Codex and ask:
+
+> "Install the `lecture-setup` folder as a personal Codex skill.
+> Keep its display name Lecture Setup."
+
+3. Start a new task after installation. Use **`$lecture-setup`** to request it.
+
+The skill identifies the lecture, downloads student materials, and places
+them in the corresponding local folder while preserving your existing work.
+
+## Lecture Setup in Action
+
+Open your local **MKTG-411** folder as the Codex project. Select **@Chrome**
+and mention the Canvas course tab, then send:
+
+> "$lecture-setup: Set up Lecture 2, R and Transforming Data, from this
+> MKTG 411 Canvas course. Use the current MKTG-411 project folder as the
+> course root. Download the lecture materials into the matching lecture folder."
+
+- Supply the lecture number/title you need and answer any course-match question.
+- Check the saved files and `lecture-materials.md` for missing or online-only items.
+- Next time, name a different lecture and reuse the same skill.
+
+<!-- Instructor: Lecture 2 is a course-context example, not a verified Canvas
+module title. Mention the actual course tab and adjust the lecture title to
+the page shown during the demonstration. Distribute lecture-setup.zip beside
+the rendered slides or upload it as a lecture material and update its link.
+Chrome/Canvas access and downloads have not been tested on a student account. -->
+
+## Five-Minute Practice
+
+Use the `demo.R` you downloaded from Canvas in your practice folder.
+
+1. **Explain:** Ask Codex what the script does. Summarize it in your own words.
+2. **Change:** Ask for help calculating **average revenue per Email order**.
+   Request a hint first, then try the change.
+3. **Check:** Run the code in RStudio. Calculate the same average by hand.
+4. **Reflect:** Explain one line you now understand and one check you performed.
+
+Be ready to share your reasoning with a classmate.
+
+<!-- Instructor: Email mean is (120 + 80) / 2 = 100.
+A valid expression is
+sales |> filter(channel == "Email") |> summarise(mean_revenue = mean(revenue)).
+This activity is on the slide only. No separate graded assignment is implied. -->
