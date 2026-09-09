@@ -5,7 +5,7 @@ A short introduction to Codex for coding and learning in Marketing Analytics.
 - Authoritative slide source: `411 Codex Introduction.Rmd`
 - Format: widescreen R Markdown ioslides, matching the course lectures
 - Styling: `style.css` and the course title background in `Figures/`
-- Scope: 19 slides including the title, with simple and complex task examples,
+- Scope: 20 slides including the title, with simple and complex task examples,
   access guidance, file-saving and debugging examples, and Chrome/Canvas setup
 - Pending work: `Chat To Do`; completed requests and checks: `Chat Completed`
 
@@ -27,7 +27,9 @@ to a paid account if usage limits arise during the semester. Official links
 and the September 7, 2026 verification date appear on the relevant slides.
 Recheck current offer terms and plan details before a later semester.
 
-The Spreadsheets plugin is the demonstration example. Its availability on a
+Plugins, skills, and connectors are defined on a dedicated slide with two
+examples each. The Excel revenue-check demonstration is on the following slide.
+The Spreadsheets plugin's availability on a
 student Free account has not been verified. The slide provides an instructor
 demonstration fallback, and the R practice does not depend on the plugin.
 

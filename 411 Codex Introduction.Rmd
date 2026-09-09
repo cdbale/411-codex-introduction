@@ -176,27 +176,43 @@ Choose the kind of help you need:
 
 > "Explain what `|>` does in this example. Use the data to illustrate it."
 
-> "Quiz me on total versus average order revenue, one question at a time."
+> "Quiz me on inner joins vs. left joins, one question at a time. Once I
+> consistently answer your questions correctly, give me three hypothetical
+> join scenarios, where I need to determine which type of join to use."
 
 Then explain it back:
 
 > "Here is my explanation of the code. What did I misunderstand?"
 
-## Checking the Work
+## Checking AI Work
 
-- **Review:** Read the changed lines and ask what each change accomplishes.
+**Ask AI to track the exact lines it changes and report back on those changes!**
+
+- **Review:** Read the changed lines and ask what each change accomplishes
+  if it isn't apparent.
 - **Run:** Execute the saved script in RStudio. Check errors and output.
-- **Verify:** Add the two Email orders by hand and compare the result.
+- **Verify:** Do calculations by hand, or ask for a different method to verify
+  the result.
 - **Interpret:** Does total revenue alone show which channel is more effective?
 
 Before granting permission, read which files or services Codex will access.
 Use course-approved data and follow each assignment's AI-use rules.
 You are responsible for understanding the work you submit.
 
-## Plugin Basics
+## Plugins, Skills, and Connectors
 
-Plugins add capabilities. **Skills** provide task instructions.
-**Connectors** give access to external services.
+| Component | What it does | Two examples |
+|---|---|---|
+| **Plugin** | An installable package that adds capabilities, such as skills or connections to tools. | **Spreadsheets:** work with Excel files.<br>**Chrome:** work in your browser. |
+| **Skill** | Reusable instructions and resources for a particular task or workflow. | **Lecture Setup:** organize Canvas materials.<br>**OpenAI Docs:** consult official product documentation. |
+| **Connector** | A connection that lets Codex read information or take authorized actions in an external service. | **Google Drive:** access shared documents.<br>**GitHub:** access code repositories. |
+
+A plugin can include skills, connectors, or both. A skill can also be installed
+on its own, as with Lecture Setup.
+
+<p class="source"><a href="https://learn.chatgpt.com/docs/plugins">Official plugin, skill, and connector definitions</a>. Checked September 9, 2026.</p>
+
+## Spreadsheets Plugin: Revenue Check
 
 1. Open **Plugins**, search for **Spreadsheets**, and open its listing.
 2. Install it if needed. Review any connection or permission requests.

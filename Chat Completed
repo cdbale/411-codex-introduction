@@ -151,3 +151,35 @@ Canvas exercise description: Not applicable to the requested local edits.
 Canvas grading/rubric note: Not applicable to the requested local edits.
 Canvas starter upload: Prepared locally for future publishing by the instructor.
 GitHub synchronization: Completion is verified separately after committing.
+
+COMPLETED UPDATE — SEPTEMBER 9, 2026 — LEARNING AND PLUGINS
+Decision: Approved by the request to make updates added to Chat To Do.
+Status: Verified in the .Rmd source and diff.
+
+Original requests (preserved verbatim):
+- Slide 13: change point three to: "Quiz me on inner joins vs. left joins, one question at a time. Once I consistently answer your questions correctly, give me three hypothetical join scenarios, where I need to determine which type of join to use."
+- Slide 14: Change title to "Checking AI Work"
+- Slide 14: Add a statement to the top of the slide: Ask AI to track exact lines it changes, and to report back on those changes!
+- Slide 14: further clarify "...what each change accomplishes if it isn't apparent."
+- Slide 14: Verify: change to "do calculations by hand, or ask for a different method to verify the result."
+- Slide 15: make this a standalone slide defining Plugins, Skills, and Connectors, with two examples of each. Make a standalone slide for the Excel Spreadsheet plugin and revenue-check test.
+
+
+Implementation and verification:
+- Slide 13: replaced the third prompt with the requested inner-join/left-join
+  quiz followed by three hypothetical scenarios after consistent correct answers.
+- Slide 14: renamed to Checking AI Work, added the exact-line tracking/reporting
+  statement, clarified the Review bullet, and broadened the Verify bullet.
+- Slide 15: standalone definitions of Plugins, Skills, and Connectors, with
+  exactly two examples for each. Definitions checked against official docs.
+- Slide 16: standalone Spreadsheets Plugin: Revenue Check, retaining the Excel
+  file and SUM-formula test, installation steps, and availability note.
+- Verified 20 total slides and kept Five-Minute Practice as the final slide.
+- Inspected the source diff; R code chunks are unchanged from the previously
+  tested version. No R test rerun was needed for these prose-only edits.
+- README slide count and plugin-demo description are synchronized.
+- No rendering or Canvas changes were requested or performed. Existing HTML,
+  demo.R, the skill package, and testing_stuff.R remain unchanged.
+- Course checklist: source slides Verified; on-slide exercise and starter code
+  preserved. Canvas assignment/rubric edits and upload are outside this request.
+  GitHub synchronization is verified separately after committing.
