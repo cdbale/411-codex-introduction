@@ -12,7 +12,7 @@ output:
 By the end of class, you should be able to:
 
 - Set up Codex and understand your access options.
-- Give Codex enough context to help with an R task.
+- Write clear prompts and revise AI output for an R task.
 - Use explanations and feedback to build your understanding.
 - Practice checking AI work and try a plugin.
 - Use the Lecture Setup Skill to organize materials from Canvas.
@@ -106,6 +106,42 @@ edit in RStudio, ask Codex for a different edit, and show how the editor and dis
 copies diverge. Explain both outcomes: saving the stale buffer overwrites Codex's
 edit; reloading discards the unsaved edit. Finish by showing the correct sequence:
 save first, ask Codex, then reload/review before continuing. -->
+
+## Best Practices for Prompting
+
+- **Define success:** State the business question, desired output, and constraints,
+  such as "Use tidyverse and return one row per marketing channel."
+- **Provide relevant context:** Name the files and explain important columns.
+  For debugging, include the exact error and expected result.
+- **Show an example:** Provide a small sample of the table, explanation, or
+  chart format you want.
+- **Resolve ambiguity:** Ask AI to clarify missing details before choosing
+  a definition of terms such as "valuable customers."
+
+<p class="source">Sources: <a href="https://developers.openai.com/api/docs/guides/prompt-engineering">OpenAI, Prompt engineering</a>; <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering (2025)</a>.</p>
+
+## Best Practices: Revise and Simplify
+
+- **Give specific feedback:** Identify what needs improvement, such as
+  repeated calculations or an explanation that is hard to follow.
+- **Ask for a revision:** Request a review against your original goal.
+  Include the instruction **"remove non-essential complexity."**
+
+> Review your solution and remove non-essential complexity. Use readable
+> tidyverse code. Preserve the required checks and correct results.
+> Explain what you changed, then rerun the code to verify it.
+
+**Check the revision:** Compare it with the data or an independent calculation.
+AI self-review alone does not establish that the answer is correct.
+
+<p class="source">Research: <a href="https://arxiv.org/abs/2303.17651">Madaan et al., Self-Refine (2023)</a>; <a href="https://arxiv.org/abs/2310.01798">Huang et al., Limits of self-correction (2024)</a>.</p>
+
+<!-- Instructor: Self-Refine found benefits from feedback and revision on its
+evaluated tasks. Huang et al. found that reasoning self-correction without
+external feedback could fail or worsen performance. These studies evaluated
+earlier models and do not establish a universal effect for current Codex.
+"Remove non-essential complexity" is the instructor's practical revision
+instruction, not a phrase experimentally validated by these papers. -->
 
 ## A Useful Prompt Has Context
 

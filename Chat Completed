@@ -183,3 +183,33 @@ Implementation and verification:
 - Course checklist: source slides Verified; on-slide exercise and starter code
   preserved. Canvas assignment/rubric edits and upload are outside this request.
   GitHub synchronization is verified separately after committing.
+
+COMPLETED UPDATE — SEPTEMBER 18, 2026 — PROMPTING BEST PRACTICES
+Decision: Explicitly requested by the instructor, including commit and push.
+Status: Verified in the slide source and diff.
+
+Request: Add one or two slides on best practices for prompting, review relevant
+academic or industry sources, and include asking AI to revise its work and
+"remove non-essential complexity." This supersedes the initial request for a
+slide focused only on revision/simplification.
+
+- Added slide 10, Best Practices for Prompting: define success, provide relevant
+  context, show examples, and ask for clarification when the task is ambiguous.
+- Added slide 11, Best Practices: Revise and Simplify: give specific feedback,
+  request revision against the goal, remove non-essential complexity, preserve
+  required checks/correct results, and verify the revision against evidence.
+- Included a sample tidyverse revision prompt with the instructor's exact phrase.
+- Updated the learning goal and README to match the 22-slide deck.
+- Reviewed and linked OpenAI's Prompt engineering guidance, Anthropic's Effective
+  context engineering for AI agents (2025), Madaan et al.'s Self-Refine (2023),
+  and Huang et al.'s Large Language Models Cannot Self-Correct Reasoning Yet
+  (ICLR 2024). Sources appear on the slides and in README.
+- Distinguished the papers' task/model-specific findings from a universal
+  guarantee. The simplification wording is course guidance, not a tested formula.
+- Source checks passed: 22 slides including title, learning goals at the start,
+  exercise at the end, unchanged R chunks, and no new whitespace errors.
+- No render was requested or performed. R code, exercise, Canvas, and the
+  existing rendered HTML are outside this edit and remain unchanged.
+- The separate sentence-removal request already in Chat To Do remains pending;
+  its original slide 15 is now slide 17, Plugins, Skills, and Connectors.
+- GitHub commit/push authorized; final synchronization checked after commit.

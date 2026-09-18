@@ -5,7 +5,7 @@ A short introduction to Codex for coding and learning in Marketing Analytics.
 - Authoritative slide source: `411 Codex Introduction.Rmd`
 - Format: widescreen R Markdown ioslides, matching the course lectures
 - Styling: `style.css` and the course title background in `Figures/`
-- Scope: 20 slides including the title, with simple and complex task examples,
+- Scope: 22 slides including the title, with simple and complex task examples,
   access guidance, file-saving and debugging examples, and Chrome/Canvas setup
 - Pending work: `Chat To Do`; completed requests and checks: `Chat Completed`
 
@@ -55,6 +55,27 @@ reports blocked downloads instead of bypassing browser access restrictions.
 No specific Canvas lecture was requested for a live run. Browser access and
 downloads have not been tested against a student account. The Lecture 2 title
 in the example should be matched to the actual Canvas page during the demo.
+
+## Prompting guidance and sources
+
+The two prompting-best-practices slides precede the existing worked prompt.
+They cover clear goals, relevant context, examples, clarification, and targeted
+revision, including the instructor's phrase "remove non-essential complexity."
+Source review completed September 18, 2026:
+
+- [OpenAI: Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
+  supports clear instructions, examples, and relevant context.
+- [Anthropic: Effective context engineering (2025)](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)
+  recommends focused context and refining instructions in response to observed failures.
+- [Madaan et al.: Self-Refine (2023)](https://arxiv.org/abs/2303.17651)
+  found benefits from iterative feedback and refinement on the tasks studied.
+- [Huang et al.: Large Language Models Cannot Self-Correct Reasoning Yet (2024)](https://arxiv.org/abs/2310.01798)
+  found limits, including degraded results, for reasoning self-correction without
+  external feedback. This motivates checking revisions against evidence.
+
+The academic findings concern the models and tasks tested, not a guaranteed
+effect for current Codex. The simplification phrase is course guidance, not a
+research-validated formula. Citations appear directly on the new slides.
 
 ## Build status
 
