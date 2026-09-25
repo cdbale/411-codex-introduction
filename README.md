@@ -5,6 +5,7 @@ A short introduction to Codex for coding and learning in Marketing Analytics.
 - Authoritative slide source: `411 Codex Introduction.Rmd`
 - Format: widescreen R Markdown ioslides, matching the course lectures
 - Styling: `style.css` and the course title background in `Figures/`
+- Published slides: [GitHub Pages](https://cdbale.github.io/411-codex-introduction/)
 - Scope: 27 slides including the title, with access guidance, an interactive
   Hillstrom email-campaign analysis, learning prompts, and Chrome/Canvas setup
 - Pending work: `Chat To Do`; completed requests and checks: `Chat Completed`
@@ -38,9 +39,10 @@ in Python. The two reference charts have been visually inspected. They are
 precomputed examples, not a recorded live Codex conversation. Actual responses
 may already identify the initial prompt's limitation.
 
-When publishing, upload `hillstrom-practice.zip` to the Codex lecture on Canvas.
-The setup slide directs students there. No Canvas upload is part of this local
-source update.
+The Hillstrom ZIP, Lecture Setup ZIP, slide HTML download, and GitHub Pages
+link are published under **Data → Codex** in the
+[Fall 2026 Canvas course](https://byu.instructure.com/courses/38688/modules#module_415181).
+The setup slide directs students there. Publication was verified September 25, 2026.
 
 ## Access guidance
 
@@ -102,7 +104,9 @@ research-validated formula. Citations appear directly on the new slides.
 
 ## Build status
 
-The `.Rmd` source is authoritative. An existing `411-Codex-Introduction.html`
-is present but has not been regenerated for these edits. Render only when the
-instructor explicitly requests it. Source structure and example calculations
-are checked separately from rendering.
+The `.Rmd` source is authoritative. The instructor finalized
+`411-Codex-Introduction.html` and its matching `index.html` on September 25, 2026.
+GitHub Pages publishes `index.html` from the root of `main`; `.nojekyll` serves
+the existing static files. The live deck matches the committed HTML, and the
+Canvas HTML download matches the local file. No agent rendering was performed.
+Render only when the instructor explicitly requests it.

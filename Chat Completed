@@ -358,3 +358,38 @@ Status: Verified for local files.
   2026 course. No upload was requested or performed.
 - The starter document and existing HTML are byte-for-byte unchanged.
   No rendering, Git commit, or push was requested or performed.
+
+COMPLETED PUBLICATION — SEPTEMBER 25, 2026 — GITHUB PAGES AND CANVAS
+Decision: Explicitly requested after the instructor finalized the HTML slides
+and created index.html.
+Status: Verified.
+- Committed and pushed all lecture repository changes to main in commit
+  3c32a1eee7170339086d2449a746812f99cc6de4. Verified the remote branch matches.
+- Enabled GitHub Pages from main at the repository root and added .nojekyll
+  for the existing static HTML. No rendering or slide edits were performed.
+- Live slides: https://cdbale.github.io/411-codex-introduction/
+- Verified the successful Pages build, the live deck, and both ZIP downloads
+  against the committed files. Git normalizes HTML line endings to LF; the
+  deployed HTML otherwise matches the instructor's local file exactly.
+- Uploaded exactly these three files to the Codex folder in MKTG 411-001:
+  Marketing Analytics, 2026 Fall, Canvas course 38688:
+  hillstrom-practice.zip (file 13879221), lecture-setup.zip (file 13879236),
+  and 411-Codex-Introduction.html (file 13879237).
+- Downloaded each uploaded file and verified its SHA-256 checksum against
+  the local original. All three files are unlocked and visible.
+- Added four published items under Codex in the Data module (415181), before
+  Live Workshop: the Pages hyperlink (3286928), HTML file (3286929), Hillstrom
+  ZIP (3286930), and Lecture Setup ZIP (3286931). Read back every target,
+  publication flag, and position; preserved other module items and their order.
+- GitHub authentication worked directly; no browser login was needed.
+- No live student-account Lecture Setup download test was performed.
+
+Superseded publication notes moved from Chat To Do:
+PUBLISHING NOTES
+- The existing HTML predates these edits. Rendering has not been requested.
+- hillstrom-practice.zip is ready for distribution with the updated slides.
+- No live student-account Canvas download test has been performed for Lecture Setup.
+
+HILLSTROM PUBLICATION STATUS
+- Local slides and classroom materials are verified; see Chat Completed.
+- Rendering, Canvas upload, and GitHub publication were not requested for this revision.
