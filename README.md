@@ -5,20 +5,42 @@ A short introduction to Codex for coding and learning in Marketing Analytics.
 - Authoritative slide source: `411 Codex Introduction.Rmd`
 - Format: widescreen R Markdown ioslides, matching the course lectures
 - Styling: `style.css` and the course title background in `Figures/`
-- Scope: 22 slides including the title, with simple and complex task examples,
-  access guidance, file-saving and debugging examples, and Chrome/Canvas setup
+- Scope: 27 slides including the title, with access guidance, an interactive
+  Hillstrom email-campaign analysis, learning prompts, and Chrome/Canvas setup
 - Pending work: `Chat To Do`; completed requests and checks: `Chat Completed`
 
-The downloadable [demo.R](demo.R) matches the working code on the coding slide.
-Students download it from Canvas and place it in their practice folder. It uses
-`tidyverse`, which must be installed in R. The four fictional orders are created
-with `tribble()`, and the summary uses `summarise()` with the native pipe `|>`.
-The intentional error appears on its own debugging slide, not in `demo.R`.
-The five-minute activity remains the final slide. Instructor answers are in
-HTML comments in the source.
+## Hillstrom interactive example
 
-Upload `demo.R` with the other lecture materials when publishing to Canvas.
-The local file is ready for upload; this update does not post it to Canvas.
+Slide 10 asks students to select Luna with Medium reasoning effort for the demo.
+Slides 11–18 ask which email campaign a retailer should repeat to increase
+short-term revenue for a similar audience. Students first request a chart of
+spending among purchasers, then improve the prompt through clearer goals,
+context, output examples, specific feedback, independent checks, and revision.
+The comparison changes when everyone assigned to each campaign is included.
+All analysis uses summaries and charts, without a predictive model.
+
+- Student download: [hillstrom-practice.zip](hillstrom-practice.zip).
+- Quarto starter: [demo.qmd](hillstrom-practice/demo.qmd), requiring `tidyverse`.
+- Study description and column definitions: [hillstrom-data-notes.md](hillstrom-data-notes.md).
+- Full data: [hillstrom.csv](hillstrom.csv), 64,000 customers and 12 fields.
+- Instructor sequence, reference values, and contingency plan: [teaching guide](instructor/hillstrom-teaching-guide.md).
+- Tested calculation and chart code: [instructor reference](instructor/hillstrom-reference.R).
+
+Students download the ZIP from the Codex lecture on Canvas and extract its
+contents directly into `MKTG-411/codex-practice`. The CSV, Quarto document, and Markdown
+notes are all at the ZIP root, with no data subfolder. Use that folder in
+RStudio and Codex so the agent does not encounter the instructor answers.
+The starter contains only the data import and neutral comments. The final
+five-minute activity applies the same prompting practices to website visits.
+
+The reference analysis runs in R, with numerical results independently checked
+in Python. The two reference charts have been visually inspected. They are
+precomputed examples, not a recorded live Codex conversation. Actual responses
+may already identify the initial prompt's limitation.
+
+When publishing, upload `hillstrom-practice.zip` to the Codex lecture on Canvas.
+The setup slide directs students there. No Canvas upload is part of this local
+source update.
 
 ## Access guidance
 
@@ -52,16 +74,17 @@ It downloads published student materials without completing assignments or
 changing Canvas. It asks for missing course/lecture/destination details and
 reports blocked downloads instead of bypassing browser access restrictions.
 
-No specific Canvas lecture was requested for a live run. Browser access and
-downloads have not been tested against a student account. The Lecture 2 title
-in the example should be matched to the actual Canvas page during the demo.
+The example targets Lecture 7, Live Workshop, in the Data unit. The instructor
+will add the workshop materials before the demonstration. Browser access and
+downloads have not been tested against a student account.
 
 ## Prompting guidance and sources
 
-The two prompting-best-practices slides precede the existing worked prompt.
-They cover clear goals, relevant context, examples, clarification, and targeted
-revision, including the instructor's phrase "remove non-essential complexity."
-Source review completed September 18, 2026:
+The Hillstrom sequence embeds the prompting practices in the class activity.
+It covers clear goals, relevant context, examples, clarification, external
+feedback, and targeted revision, including "remove non-essential complexity."
+The sources reviewed for the original guidance are retained below. The data
+source and OpenAI guidance were checked again September 25, 2026:
 
 - [OpenAI: Prompt engineering](https://developers.openai.com/api/docs/guides/prompt-engineering)
   supports clear instructions, examples, and relevant context.

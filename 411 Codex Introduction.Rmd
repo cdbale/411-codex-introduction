@@ -12,29 +12,29 @@ output:
 By the end of class, you should be able to:
 
 - Set up Codex and understand your access options.
-- Write clear prompts and revise AI output for an R task.
+- Improve prompts to answer a marketing question with R summaries and charts.
 - Use explanations and feedback to build your understanding.
-- Practice checking AI work and try a plugin.
+- Check campaign comparisons and AI conclusions, and try a plugin.
 - Use the Lecture Setup Skill to organize materials from Canvas.
 
 ## Simple Tasks
 
-Codex is an AI agent that can work with files in your project.
+Codex is an AI agent that can work with files and programs on your computer.
 
 | When you need help with... | A useful request |
 |---|---|
 | Understanding Code | "Explain what each line of this code does." |
-| Fixing an Error | "Explain this error and suggest the smallest fix." |
+| Fixing an Error | "Explain this error and suggest the simplest fix." |
 | Choosing a Function | "Which tidyverse function should I use to keep only Email orders?" |
 | Making a Plot | "Help me make a bar chart of revenue by marketing channel." |
 
-You supply the business question and evaluate the answer.
+You supply the prompt and evaluate the result.
 
 ## Complex Tasks {.complex-tasks}
 
 | When you need help with... | A useful request |
 |---|---|
-| An Analysis | "My client wants to identify the most valuable customers. I think we should start by identifying who made the most recent purchases. Can you identify any shortcomings with this approach, and suggest alternative definitions of 'valuable' customers? Then we'll identify the pros and cons of each definition together." |
+| Brainstorming | "My client wants to identify the most valuable customers. I think we should start by identifying who made the most recent purchases. Can you identify any shortcomings with this approach, and suggest alternative definitions of 'valuable' customers? Then we'll identify the pros and cons of each definition together." |
 | Vibe Coding | "Based on this analysis of most valuable customers, I want to build a dashboard that allows decision makers to easily query the data and visualize customer characteristics. Let's start by outlining an implementation plan and then executing on that plan. I'll rely on you to write the back end code, so please provide me with a way to access the front-end dashboard to evaluate it and provide feedback." |
 
 ## Installation and Sign-In
@@ -45,22 +45,20 @@ You supply the business question and evaluate the answer.
 3. Select **Codex** from the product menu.
 4. Send a first message: "I'm learning R for marketing analytics."
 
-Codex is now part of the ChatGPT desktop app. Keep **R and RStudio**
+Codex is part of the ChatGPT desktop app. Keep **R and RStudio**
 installed for running and checking your course code.
 
 <p class="source">Setup checked September 7, 2026. <a href="https://learn.chatgpt.com/docs/windows/windows-app">Windows setup help</a>.</p>
 
 ## Our Plan for Access This Semester
 
-- **Start with ChatGPT Free.** It includes Codex for short coding tasks.
-- Claim the student credits on the next slide.
-- **Plan to upgrade to a paid account if you encounter usage limits at any
-  point during the semester.** Plus is currently US$20/month.
-- Check your usage balance and reset time when a limit appears.
-  Paid accounts also have limits.
+- Use your BYU student email to setup an account and/or login
+- Claim the student credits on the next slide
+- CES ChatGPT Enterprise accounts should give a credit allocation
+- Check your usage and request credit limit increases!
+- You can also use occasional free resets
 
 Small, focused requests use less capacity than long tasks with many files.
-Free access has no published fixed token allowance we can promise for class.
 
 <p class="source"><a href="https://learn.chatgpt.com/docs/pricing">Official plans and usage guidance</a>. Checked September 7, 2026.</p>
 
@@ -72,33 +70,32 @@ Free access has no published fixed token allowance we can promise for class.
    Use your university email to verify your student status.
 3. After approval, check your usage page for **2,500 credits ($100)**.
 
-- Free accounts qualify. Credits extend your included Codex usage.
-- You must attend a degree-granting university in the U.S. or Canada
-  and reside in the U.S. or Canada when claiming.
-- One offer per verified student. Credits expire **12 months after the grant**.
+(I'm hoping this works even if you are on an enterprise account.)
 
 <p class="source"><a href="https://developers.openai.com/community/students">Student offer and eligibility</a>. Checked September 7, 2026.</p>
 
 ## Your First Project
 
-1. Create `MKTG-411/codex-practice` on your computer.
-2. In Codex, add or open that folder as a project and start a new task.
-3. Download **`demo.R` from Canvas** and place it in that folder.
-   Open it in RStudio.
+1. Download **`hillstrom-practice.zip` from the Codex lecture on Canvas**.
+2. Create `MKTG-411/codex-practice` and extract the ZIP's contents directly into it:
+   `hillstrom.csv`, `demo.qmd`, and `hillstrom-data-notes.md` together.
+3. Open `demo.qmd` in RStudio. Set the working directory to `codex-practice`.
+4. Open that same folder as a Codex project. Start a new task:
+   "Describe the contents of demo.qmd".
 
 | Part of the app | What you do there |
 |---|---|
-| Project and task list | Return to your course folder and conversations. |
+| Project and task list | Navigate your folders and conversations. |
 | Message box | Name a file, describe a goal, and give follow-up instructions. |
 | File or change view | Open the saved output and inspect edits. |
 
 ## Saving Files Before Codex Makes Changes
 
-- You **MUST save your files before asking Codex to make changes**.
-- Codex works with the saved file on disk. Unsaved edits exist only in your editor.
-- Reloading can discard your unsaved edits. Saving an old editor copy after
-  Codex finishes can overwrite Codex's changes.
-- After Codex finishes, reload the updated file and review it before editing again.
+- SAVE YOUR WORK **BEFORE** PROMPTING CODEX.
+- Codex works with the saved file on your hard drive. 
+- If you have unsaved edits, they exist only in RStudio.
+- If Codex makes changes to an unsaved file, you can lose your unsaved edits. 
+- Saving your copy after Codex makes changes can overwrite Codex's changes.
 - **Let's see an example of what NOT to do...**
 
 <!-- Instructor: Demonstrate using a disposable copy of a file. Make an unsaved
@@ -107,116 +104,178 @@ copies diverge. Explain both outcomes: saving the stale buffer overwrites Codex'
 edit; reloading discards the unsaved edit. Finish by showing the correct sequence:
 save first, ask Codex, then reload/review before continuing. -->
 
-## Best Practices for Prompting
+## Model Settings for the Demo
 
-- **Define success:** State the business question, desired output, and constraints,
-  such as "Use tidyverse and return one row per marketing channel."
-- **Provide relevant context:** Name the files and explain important columns.
-  For debugging, include the exact error and expected result.
-- **Show an example:** Provide a small sample of the table, explanation, or
-  chart format you want.
-- **Resolve ambiguity:** Ask AI to clarify missing details before choosing
-  a definition of terms such as "valuable customers."
+Before sending your first prompt, select:
 
-<p class="source">Sources: <a href="https://developers.openai.com/api/docs/guides/prompt-engineering">OpenAI, Prompt engineering</a>; <a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Anthropic, Effective context engineering (2025)</a>.</p>
+- **Model: Luna**
+- **Reasoning effort: Medium**
 
-## Best Practices: Revise and Simplify
+Use these settings throughout today's demonstration to keep credit usage low.
 
-- **Give specific feedback:** Identify what needs improvement, such as
-  repeated calculations or an explanation that is hard to follow.
-- **Ask for a revision:** Request a review against your original goal.
-  Include the instruction **"remove non-essential complexity."**
+## The Hillstrom Campaign Decision
 
-> Review your solution and remove non-essential complexity. Use readable
-> tidyverse code. Preserve the required checks and correct results.
-> Explain what you changed, then rerun the code to verify it.
+A retailer wants to generate sales using an email campaign.
 
-**Check the revision:** Compare it with the data or an independent calculation.
-AI self-review alone does not establish that the answer is correct.
+**Given the data, which email, if either, should it repeat? What evidence supports that choice?**
 
-<p class="source">Research: <a href="https://arxiv.org/abs/2303.17651">Madaan et al., Self-Refine (2023)</a>; <a href="https://arxiv.org/abs/2310.01798">Huang et al., Limits of self-correction (2024)</a>.</p>
+The data contain 64,000 customers randomly assigned to:
 
-<!-- Instructor: Self-Refine found benefits from feedback and revision on its
-evaluated tasks. Huang et al. found that reasoning self-correction without
-external feedback could fail or worsen performance. These studies evaluated
-earlier models and do not establish a universal effect for current Codex.
-"Remove non-essential complexity" is the instructor's practical revision
-instruction, not a phrase experimentally validated by these papers. -->
+- An email featuring men's merchandise.
+- An email featuring women's merchandise.
+- No email.
 
-## A Useful Prompt Has Context
+We observe purchases and spending over the following **two weeks**.
 
-**Too vague:** "Fix my code."
+**Discuss:** How would we determine whether a campaign should be repeated?
 
-**More useful:**
+<!-- Instructor: Allow students to propose measures before revealing a solution.
+We are assessing short-term revenue for a similar audience. We cannot establish
+profitability without costs and margins. No predictive model is needed.
+See instructor/hillstrom-teaching-guide.md for timing and verified results. -->
 
-> In `demo.R`, help me calculate total revenue for Email orders.
-> Use tidyverse syntax and preserve the original data. Explain your plan before
-> editing. After the change, explain each new line and how I can check it.
+## Our First Prompt
 
-- State the **goal**, **file**, **constraints**, and **desired output**.
-- For an error, include the exact message and what you expected.
-- Continue with a focused follow-up: "Explain the row selection more slowly."
+> Add code to make a bar chart comparing average spend among customers who purchased in the two email campaigns.
 
-## Coding Help with R
+Run the prompt and inspect the saved code and chart.
 
-Open the `demo.R` you downloaded from Canvas. Each row is one fictional order.
+- Which campaign looks better by this measure?
+- What does this plot not account for?
+- Does this answer the retailer's business question?
 
-```{r sales-example, eval=FALSE}
-library(tidyverse)
+<!-- Instructor: This is a deliberately incomplete analytical request, not an
+instruction for Codex to make an error. Purchasers' two-week spending averages
+$113.53 for men's email and $121.89 for women's email. These are not average
+order values: customers, not orders, are the unit of observation.
+Codex may flag the limitation immediately. Acknowledge that success and have
+students explain it. Do not force or claim an incorrect live response. -->
 
-sales <- tribble(
-  ~channel, ~revenue,
-  "Email",      120,
-  "Email",       80,
-  "Search",     150,
-  "Search",      50
-)
+## Add A Clearer Goal and Relevant Context
 
-sales |>
-  summarise(total_revenue = sum(revenue))
-```
+**Prompting tip:** Explain the decision and ask for clarification.
 
-Ask: "Explain this code. Help me calculate revenue for Email orders only."
+> Our goal is to establish whether an email campaign increased revenue. 
+> Does our first chart answer that question?
+> Explain any mismatch and ask us one question about how to measure
+> success before changing the analysis.
 
-<!-- Instructor: Run the example in RStudio. Total revenue is 400.
-Email total is 200. A valid change is
-sales |> filter(channel == "Email") |> summarise(total_revenue = sum(revenue)).
-Keep this explanation out of the student-facing code until discussion. -->
+Does AI identify any key issues?
 
-## Debugging with Codex
+<p class="source"><a href="https://developers.openai.com/api/docs/guides/prompt-engineering">OpenAI: clear instructions and relevant context</a>.</p>
 
-After running `demo.R`, try this example in the RStudio Console.
-It contains an intentional mistake:
+<!-- Instructor: Have students supply their own definition first. A useful
+resolution is two-week revenue per assigned customer, compared with no email.
+The next slide gives an output example after that discussion. If students
+choose another metric, compare its business implications explicitly. -->
 
-```{r debugging-example, eval=FALSE}
-sales |>
-  summarise(total_revenue = sum(revenues))
-```
+## A More Useful Deliverable
 
-Give Codex the code, the **exact error message**, and your intended result:
+**Prompting tip:** Refine the goal, specify the desired output and define an example of its structure.
 
-> "I expected total revenue across all orders. Explain this error and suggest
-> the smallest fix. Help me understand why the corrected code works."
+(Adapt the following as needed):
 
-Run the correction and check the answer against the four orders.
+> Revise demo.qmd to answer our business question using numerical summaries and a chart.
+> Include all email campaign groups (including no email). The numerical summaries should be
+> contained in a table with one row per group. Include customer counts, purchase rate, and revenue per targeted customer. 
+Keep the raw data unchanged. Use readable tidyverse code.
 
-<!-- Instructor: The column is revenue, not revenues. The incorrect pipeline
-should report that revenues is not found. The corrected total is 400.
-The downloadable demo.R intentionally contains only the working example. -->
+**Example table headings:**
+
+Group / Customers / Purchase rate / Revenue per customer
+
+<!-- Instructor: These are deliverable requirements, not a prescribed sequence
+of R operations. Students and Codex decide how to implement them. Ask students
+what the denominator is before running. Use unrounded values for differences.
+A bar chart of group means is enough. Do not add predictive modeling. -->
+
+## Specific Feedback on the Output
+
+**Prompting tip:** Name the problem you actually observe.
+
+Compare the revised output with your first chart.
+
+- Are the units and the two-week period clear?
+- Can a reader identify the comparison group?
+- Does the written recommendation follow from the numbers?
+
+> We need to make the following improvements....
+> Make those changes and explain back to me how the change helps answer our business question.
+> Make sure to preserve the portions of the analysis that are already correct.
+
+**Class contribution:** Agree on one specific piece of feedback before sending it.
+
+<!-- Instructor: Do not invent a defect if the output is already strong.
+Examples, only if needed: ambiguous dollars-per-person labels, excessive
+decimal places, a missing no-email row, or an explanation that mistakes
+revenue per purchaser for revenue per assigned customer. -->
+
+## Honest Conclusions
+
+**Prompting tip:** Supply evidence and invite disagreement.
+
+> The analysis so far suggests that the Men's merchandise email raised revenue per customer significantly
+> compared to the no email group. We could recommend that campaign to the client, but does the 
+> evidence support that that campaign truly increases revenue? Give a critical evaluation, and state
+> any additional evidence we need to give a strong recommendation.
+
+<p class="source"><a href="https://arxiv.org/abs/2310.01798">Huang et al. (2024): limits of self-correction without external feedback</a>.</p>
+
+<!-- Instructor: External reference: men's email $30,311.69 / 21,307 customers
+= $1.422616511. No email: $13,908.33 / 21,306 = $0.652789355. Difference:
+$0.769827156 per assigned customer. Do not demand artificial certainty.
+Random assignment supports the comparison, but this class activity has not
+quantified sampling uncertainty. Historical results do not guarantee future
+results, and campaign costs/margins are absent. The cited paper studied
+particular earlier models/tasks; it does not guarantee current Codex behavior. -->
+
+## Revision and Simplification
+
+**Prompting tip:** Ask for a focused revision.
+
+> Review demo.qmd and remove non-essential complexity. Keep the summaries,
+> chart, and checks needed for our business question. Use readable
+> tidyverse code. Explain each change and
+> rerun the R code chunks to verify that the numerical results stay the same.
+
+**Review together:**
+
+- Which change makes the analysis easier to understand?
+- Did we accidentally lose an important check or limitation?
+- If the work was already simple, was any change necessary?
+
+<p class="source"><a href="https://arxiv.org/abs/2303.17651">Madaan et al., Self-Refine (2023)</a>. The simplification phrase is course guidance, not a guarantee of improvement.</p>
+
+## Our Recommendation to the Retailer
+
+Write your own answer first, then ask Codex for a concise revision.
+
+> I've written a short recommendation in the .qmd file. Revise it to be more professional
+> and ensure that I am not making claims that the data don't support. Use only results we have checked together.
+
+Compare that answer with your initial recommendation.
+
+**Discuss:** Which improvement to the prompt changed the business answer most?
+Which change only improved how we communicated it?
+
+<!-- Instructor: Men's email has the higher observed two-week revenue per
+assigned customer: $1.42 versus $1.08 for women's and $0.65 for no email.
+Estimated increases versus no email are about $0.77 and $0.42, respectively.
+Favor men's for a comparable audience on this revenue criterion, while
+acknowledging sampling uncertainty, the short observation window, and missing
+cost/margin information. Do not call this proof of future profitability. -->
 
 ## Learning with Codex
 
 Choose the kind of help you need:
 
-> "Give me one hint about selecting Email orders. Wait for my attempt."
+> "Give me one hint about why including nonbuyers changes our campaign comparison."
 
-> "Explain what `|>` does in this example. Use the data to illustrate it."
+> "Explain what `|>` does in our Hillstrom code. Use one calculation to illustrate it."
 
 > "Quiz me on inner joins vs. left joins, one question at a time. Once I
 > consistently answer your questions correctly, give me three hypothetical
 > join scenarios, where I need to determine which type of join to use."
-
-Then explain it back:
 
 > "Here is my explanation of the code. What did I misunderstand?"
 
@@ -226,14 +285,12 @@ Then explain it back:
 
 - **Review:** Read the changed lines and ask what each change accomplishes
   if it isn't apparent.
-- **Run:** Execute the saved script in RStudio. Check errors and output.
+- **Run:** Run the R code chunks in the saved document in RStudio. Check errors and output.
 - **Verify:** Do calculations by hand, or ask for a different method to verify
   the result.
-- **Interpret:** Does total revenue alone show which channel is more effective?
+- **Interpret:** Does our campaign comparison answer the business question?
 
-Before granting permission, read which files or services Codex will access.
-Use course-approved data and follow each assignment's AI-use rules.
-You are responsible for understanding the work you submit.
+**Remember**: You are responsible for understanding the work you submit.
 
 ## Plugins, Skills, and Connectors
 
@@ -243,10 +300,13 @@ You are responsible for understanding the work you submit.
 | **Skill** | Reusable instructions and resources for a particular task or workflow. | **Lecture Setup:** organize Canvas materials.<br>**OpenAI Docs:** consult official product documentation. |
 | **Connector** | A connection that lets Codex read information or take authorized actions in an external service. | **Google Drive:** access shared documents.<br>**GitHub:** access code repositories. |
 
-A plugin can include skills, connectors, or both. A skill can also be installed
-on its own, as with Lecture Setup.
+A plugin can include skills, connectors, or both.
 
 <p class="source"><a href="https://learn.chatgpt.com/docs/plugins">Official plugin, skill, and connector definitions</a>. Checked September 9, 2026.</p>
+
+## Try Another Prompt
+
+> "I'm having trouble differentiating between plugins, skills, and connectors in Codex. Give me a simple explanation of the similarities and differences between each one, and include an analogy."
 
 ## Spreadsheets Plugin: Revenue Check
 
@@ -291,45 +351,46 @@ The browser plugin provides access. A **skill** supplies a repeatable workflow.
 2. Open that local folder in Codex and ask:
 
 > "Install the `lecture-setup` folder as a personal Codex skill.
-> Keep its display name Lecture Setup."
-
-3. Start a new task after installation. Use **`$lecture-setup`** to request it.
 
 The skill identifies the lecture, downloads student materials, and places
 them in the corresponding local folder while preserving your existing work.
 
 ## Lecture Setup in Action
 
-Open your local **MKTG-411** folder as the Codex project. Select **@Chrome**
-and mention the Canvas course tab, then send:
+Open your local **MKTG-411** folder as a Codex project. Select **@Chrome**
+and login to a Canvas course tab, then send:
 
-> "$lecture-setup: Set up Lecture 2, R and Transforming Data, from this
+> "$lecture-setup: Set up Lecture 7, the Live Workshop in the Data Unit, from the
 > MKTG 411 Canvas course. Use the current MKTG-411 project folder as the
-> course root. Download the lecture materials into the matching lecture folder."
+> course root. Download the lecture materials into a lecture folder with an appropriate name."
 
 - Supply the lecture number/title you need and answer any course-match question.
 - Check the saved files and `lecture-materials.md` for missing or online-only items.
 - Next time, name a different lecture and reuse the same skill.
 
-<!-- Instructor: Lecture 2 is a course-context example, not a verified Canvas
-module title. Mention the actual course tab and adjust the lecture title to
-the page shown during the demonstration. Distribute lecture-setup.zip beside
+<!-- Instructor: The example targets Lecture 7, Live Workshop, in the Data unit.
+The instructor will add the workshop materials before the demonstration.
+Mention the actual course tab. Distribute lecture-setup.zip beside
 the rendered slides or upload it as a lecture material and update its link.
 Chrome/Canvas access and downloads have not been tested on a student account. -->
 
 ## Five-Minute Practice
 
-Use the `demo.R` you downloaded from Canvas in your practice folder.
+The retailer now asks whether **website visits** tell the same story as revenue.
 
-1. **Explain:** Ask Codex what the script does. Summarize it in your own words.
-2. **Change:** Ask for help calculating **average revenue per Email order**.
-   Request a hint first, then try the change.
-3. **Check:** Run the code in RStudio. Calculate the same average by hand.
-4. **Reflect:** Explain one line you now understand and one check you performed.
+Using the same Hillstrom data, work with a partner to request a compact
+comparison of all three groups and a brief answer. Keep demo.qmd's revenue
+analysis available for comparison.
 
-Be ready to share your reasoning with a classmate.
+- Decide what a fair comparison of visits would show.
+- Write a prompt that names the goal, context, and desired output.
+- Check one result independently, then give Codex specific feedback.
+- Explain whether your finding changes the recommendation and why.
 
-<!-- Instructor: Email mean is (120 + 80) / 2 = 100.
-A valid expression is
-sales |> filter(channel == "Email") |> summarise(mean_revenue = mean(revenue)).
-This activity is on the slide only. No separate graded assignment is implied. -->
+Be ready to share one prompt improvement and one check you performed.
+
+<!-- Instructor: Semi-open-ended transfer activity. Do not prescribe functions.
+Visit rates: men's 3894 / 21307 = 18.2757%; women's 3238 / 21387 = 15.1400%;
+no email 2262 / 21306 = 10.6167%. Increases versus no email are about 7.66
+and 4.52 percentage points. Men's leads here too, but visits are not sales.
+No separate graded assignment is implied. Keep this as the final slide. -->

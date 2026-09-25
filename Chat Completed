@@ -213,3 +213,148 @@ slide focused only on revision/simplification.
 - The separate sentence-removal request already in Chat To Do remains pending;
   its original slide 15 is now slide 17, Plugins, Skills, and Connectors.
 - GitHub commit/push authorized; final synchronization checked after commit.
+
+COMPLETED UPDATE — SEPTEMBER 25, 2026 — HILLSTROM LIVE PROMPTING EXAMPLE
+Decision: Instructor selected Hillstrom and required summaries and charts,
+without a complicated predictive model. Construction of the example approved.
+Current status: Verified for the local source, starter, data, and reference
+materials. The original selection-stage proposal is preserved below, followed
+by the implementation and verification record.
+AGENT REVIEW — SEPTEMBER 25, 2026 — INTERACTIVE PROMPTING EXAMPLE
+
+1. Replace slides 10–17, from Best Practices for Prompting through Debugging
+   with Codex, with a progressive example using real marketing data.
+   Request: Begin with a business question and an underspecified prompt, then
+   have the class improve the prompt using the existing prompting principles,
+   including external feedback and "remove non-essential complexity."
+   Evidence: The current source uses four fictional orders and separates the
+   prompting advice from the analysis. The current deck has 26 slides.
+   Authorized now: Research and propose datasets. The instructor will select
+   one before construction of the example or changes to the slides.
+   Decision: Pending dataset choice — Approve / Alter / Reject.
+
+   Shortlist:
+   A. Hillstrom email experiment (recommended): 64,000 customers assigned to
+      men's merchandise email, women's merchandise email, or no email.
+      Teaching opportunity: define success, distinguish visits/purchases from
+      incremental revenue, use the control group, and assess uncertainty.
+      Source: https://blog.minethatdata.com/2008/03/minethatdata-e-mail-analytics-and-data.html
+      Mirror documentation: https://www.uplift-modeling.com/en/latest/api/datasets/fetch_hillstrom.html
+      Verified the scikit-uplift mirror download in memory: 64,000 rows,
+      12 columns, three treatment groups. Original HTTPS download failed
+      certificate validation; the documented mirror returned HTTP 200.
+   B. UCI Online Retail: 541,909 transaction lines from a UK online gift retailer.
+      Teaching opportunity: define customer value and the decision date,
+      distinguish order frequency from line counts, handle cancellations,
+      and avoid equating historical revenue with future marketing response.
+      Source: https://archive.ics.uci.edu/dataset/352/online+retail
+   C. UCI Bank Marketing: use bank-additional-full.csv, with 41,188 records.
+      Teaching opportunity: define the targeting decision, exclude information
+      unavailable before contact, and evaluate predictions on held-out data.
+      This option adds more modeling content than the other two.
+      Source: https://archive.ics.uci.edu/dataset/222/bank+marketing
+
+   Construction notes for after selection: Actual Codex responses vary; an
+   underspecified prompt is not guaranteed to fail. Rehearse and evaluate the
+   observed responses against explicit business criteria. Preserve the open
+   class discussion rather than prescribing the analysis operations in slides.
+   Dependency: Revisit demo.R and references to the toy data in slide 8,
+   Your First Project, slides 18–19, Learning with Codex and Checking AI Work,
+   and slide 26, Five-Minute Practice, when the replacement is designed.
+   Status: Dataset choice pending. No slides, code, HTML, or Canvas edited.
+
+IMPLEMENTATION AND VERIFICATION (supersedes the pending statuses above)
+- Replaced exactly slides 10-17 with the Hillstrom campaign decision, initial
+  purchaser-spending prompt, goal/context clarification, output specification,
+  specific feedback, independent checks and honest conclusions, simplification,
+  and a final management recommendation.
+- Kept the current 26-slide structure. Aligned the learning goals, slide 8 setup,
+  related learning/checking references, and final five-minute visit-rate activity.
+- Preserved other existing instructor edits, plugin examples, and access guidance.
+- Updated demo.R to a neutral tidyverse data import. No solution is prefilled.
+  Existing lessons cover the grouped summaries and chart concepts used here.
+- Added the full 64,000-row, 12-column data, study/column notes with attribution,
+  and hillstrom-practice.zip containing only the three student files.
+- Downloaded the scikit-uplift mirror and matched its documented MD5 checksum.
+  CSV SHA-256: 00a6a868e05a9ffe7382da51629f6d6dce88c5acfc945e79d314ebc78fd3a2c0.
+- Added instructor/hillstrom-teaching-guide.md and hillstrom-reference.R, plus
+  two reference CSV summaries and two reference charts. The guide documents
+  facilitation, verified values, limitations, and a precomputed-output fallback.
+- R reference and starter both executed successfully. Independent Python
+  calculations matched every campaign summary and purchaser-mean result.
+- Extracted the student ZIP to a fresh temporary folder and successfully ran
+  demo.R there. Confirmed that no instructor files or answers are in the ZIP.
+- Visually inspected both reference charts. Checked the source structure:
+  exactly eight replacement slides, no solution code on live-coding slides,
+  required learning goals present, and the practice activity remains last.
+- Git diff --check reports only two pre-existing trailing-space lines in the
+  instructor's unchanged file-saving slide. New slide sections and other
+  authored files have no trailing whitespace.
+- Codex prompts have not been rehearsed in a separate live model session.
+  Reference outputs are explicitly described as calculated examples, not a
+  captured Codex transcript. Guidance covers a strong initial response rather
+  than promising or forcing an agent error.
+- No slide rendering was requested or performed. Existing HTML was preserved.
+- Canvas assignments/uploads and GitHub publication are outside this local
+  revision. No Canvas state, Git commits, or remote branches were changed.
+
+COMPLETED UPDATE — SEPTEMBER 25, 2026 — CANVAS DOWNLOAD AND FLAT ZIP
+Decision: Explicitly requested.
+Status: Verified.
+Request: Direct students to download the Hillstrom ZIP from Canvas and extract
+it into codex-practice, with the data, demo, and Markdown notes at the root.
+- Updated slide 8, Your First Project, to name the Canvas lecture download,
+  codex-practice destination, all three files, and the R working directory.
+- Moved hillstrom.csv to the lecture root and updated both R import paths.
+- Rebuilt hillstrom-practice.zip with exactly hillstrom.csv, demo.R, and
+  hillstrom-data-notes.md at its root; no data or wrapper directory.
+- Aligned the data notes, README, and instructor setup instructions.
+- Verified ZIP contents against the source files and the original CSV checksum.
+- Extracted the ZIP into a fresh folder and successfully loaded all 64,000
+  rows in R. The instructor reference also ran successfully with the new path.
+- Existing user-extracted practice copies were preserved.
+- No slide rendering or Canvas upload was requested or performed.
+
+COMPLETED UPDATE — SEPTEMBER 25, 2026 — QUARTO DEMO REFERENCES
+Decision: Explicitly requested slide update after the instructor changed demo.R
+to a Quarto document.
+Status: Verified in the source.
+- Located the instructor's saved hillstrom-practice/demo.qmd and matched that
+  exact filename casing in all seven slide references.
+- Updated slide 8 setup, the live prompts, and the final practice activity.
+- Updated execution wording to run R code chunks in the saved Quarto document.
+- Confirmed no demo.R references remain in the slides and the 26-slide count
+  is unchanged. Preserved the instructor's starter and other files.
+- No render or publication was requested or performed.
+
+COMPLETED UPDATE — SEPTEMBER 25, 2026 — DEMO MODEL SETTINGS
+Decision: Explicitly requested.
+Status: Verified in the source.
+- Added slide 10, Model Settings for the Demo, immediately before Hillstrom.
+- Instructed students to select Luna with Medium reasoning effort throughout
+  the demonstration to keep credit usage low.
+- Updated the README slide count and instructor-guide slide references.
+- Verified 27 total slides, the reminder immediately before the example,
+  and the final practice activity retained. No render was performed.
+
+COMPLETED UPDATE — SEPTEMBER 25, 2026 — REQUESTED CONSISTENCY FOLLOW-UP
+Decision: Explicitly requested following the read-only audit.
+Status: Verified for local files.
+- Verified both newly added Hillstrom ZIP copies: integrity checks passed,
+  exactly three files at the root, and 64,000 rows / 12 columns in the CSV.
+  The CSV matches the original documented checksum and both ZIPs initially
+  matched the extracted practice files.
+- Updated current supporting documents to demo.qmd, matching the actual saved
+  filename. README now links to hillstrom-practice/demo.qmd.
+- Updated both ZIPs with the revised student data notes. Verified all archived
+  files match the practice-folder files and both archives remain identical.
+- Changed the slide's campaign label to Men's merchandise email. Preserved
+  the intentional overstatement about significance.
+- Updated the slide instructor comment and README to Lecture 7, Live Workshop,
+  in the Data unit, noting that the instructor will add its materials later.
+- Left the instructor demonstration sequence unchanged, apart from starter
+  filename references, and left the other audit issues untouched as requested.
+- Read-only Canvas file search found no Hillstrom file in the verified Fall
+  2026 course. No upload was requested or performed.
+- The starter document and existing HTML are byte-for-byte unchanged.
+  No rendering, Git commit, or push was requested or performed.

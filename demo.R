@@ -1,17 +1,15 @@
 # MKTG 411: Codex introduction
-# Each row is one fictional order. Revenue is in US dollars.
+# Hillstrom email experiment: one row per assigned customer.
+# Download hillstrom-practice.zip from Canvas and extract to codex-practice.
+# Keep the CSV, this script, and the notes together in that folder.
+# Use codex-practice as the R working directory.
+# Read hillstrom-data-notes.md for the study and column definitions.
 # If needed, install tidyverse once with install.packages("tidyverse").
 # Save this file before asking Codex to change it, then reload it afterward.
 
 library(tidyverse)
 
-sales <- tribble(
-  ~channel, ~revenue,
-  "Email",      120,
-  "Email",       80,
-  "Search",     150,
-  "Search",      50
-)
+hillstrom <- read_csv("hillstrom.csv", show_col_types = FALSE)
 
-sales |>
-  summarise(total_revenue = sum(revenue))
+# Our class will decide what evidence the retailer needs.
+# Ask Codex to add the analysis here. Keep the original data unchanged.
