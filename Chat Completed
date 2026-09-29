@@ -393,3 +393,17 @@ PUBLISHING NOTES
 HILLSTROM PUBLICATION STATUS
 - Local slides and classroom materials are verified; see Chat Completed.
 - Rendering, Canvas upload, and GitHub publication were not requested for this revision.
+
+COMPLETED EXPORT — SEPTEMBER 28, 2026 — SCROLLABLE SLIDE PDF
+Decision: Explicitly requested.
+Status: Verified.
+- Converted the existing HTML slides into output/pdf/411-Codex-Introduction.pdf,
+  with 27 landscape pages, one slide per page, continuous single-column layout,
+  fit-to-width opening, searchable text, and bookmarks for all slides.
+- Preserved the slide content and artwork. Slightly reduced the PDF-only text
+  size on Your First Project so its table clears the slide-number footer.
+- Changed the PDF's Lecture Setup ZIP link to the published GitHub Pages download.
+- Verified every slide title and its text, page dimensions, and slide count;
+  rendered and visually inspected all 27 pages, then rechecked the adjusted page.
+- The source HTML, index.html, and Rmd were not changed. No publication requested
+  or performed for this PDF export.
