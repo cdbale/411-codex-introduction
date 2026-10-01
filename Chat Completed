@@ -407,3 +407,14 @@ Status: Verified.
   rendered and visually inspected all 27 pages, then rechecked the adjusted page.
 - The source HTML, index.html, and Rmd were not changed. No publication requested
   or performed for this PDF export.
+
+COMPLETED PUBLICATION — SEPTEMBER 29, 2026 — SPIRITUAL THOUGHT
+Decision: Explicitly requested.
+Status: Verified.
+- Copied the instructor's existing fresh-slides.html to spiritual-thought.html,
+  preserving the rendered content and original files.
+- Uploaded the HTML to the Codex folder in the Fall 2026 Canvas course 38688
+  (file 13917224), and published it first under Data > Codex (item 3290098).
+- Downloaded the Canvas copy and verified its SHA-256 matches the local file.
+  Verified the module item is published and unrelated items retain their order.
+- No GitHub Pages link was created and no GitHub changes were pushed.
